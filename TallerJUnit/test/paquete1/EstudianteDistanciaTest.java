@@ -62,19 +62,6 @@ public class EstudianteDistanciaTest {
 
     }
 
-    /**
-     * Test of obtenerNotas method, of class EstudianteDistancia.
-     */
-    @Test
-    public void testObtenerNotas() {
-        System.out.println("obtenerNotas");
-        ArrayList<Nota> ns = null;
-        instance.obtenerNotas(ns);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    
     @Test
     public void testEstablecerMejorNota() throws
             IllegalArgumentException,
@@ -141,7 +128,7 @@ public class EstudianteDistanciaTest {
         ns.add(new Nota(6.0));
         double expResult = 5.0;
         instance.establecerNotas(ns);
-        instance.establecerMejorNota();
+        instance.establecerPeorNota();
         double result = instance.obtenerPeorNota();
         
         assertEquals(expResult, result, 0.0);
@@ -169,7 +156,7 @@ public class EstudianteDistanciaTest {
      * Test of obtenerMejorPromedio method, of class EstudianteDistancia.
      */
     @Test
-    public void testObtenerMejorPromedio() {
+    public void testObtenerPromedio() {
         System.out.println("obtenerMejorPromedio");
         ArrayList<Nota> ns = new ArrayList<>();
         ns.add(new Nota(10.0));
@@ -177,8 +164,8 @@ public class EstudianteDistanciaTest {
         ns.add(new Nota(6.0));
         double expResult = 7.0;
         instance.establecerNotas(ns);
-        instance.establecerMejorNota();
-        double result = instance.obtenerMejorPromedio();
+        instance.establecerPromedio();
+        double result = instance.obtenerPromedio();
         
         assertEquals(expResult, result, 0.0);
     }
@@ -200,7 +187,7 @@ public class EstudianteDistanciaTest {
         instance.establecerPeorNota();
         instance.establecerPromedio();
         instance.establecerNombresEstudiante("Andrea");
-        instance.establecerApellidoEstudiante("Vela");
+        instance.establecerApellidosEstudiante("Vela");
         instance.establecerIdentificacionEstudiante("98981234");
         
         String expResult = "Nombre Estudiante: Andrea Vela\n"

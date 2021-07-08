@@ -10,21 +10,19 @@ package paquete1;
  * @author reroes
  */
 public class Nota {
-    
+
     private double valor;
-    
-    
-    public Nota(double v){
+
+    public Nota(double v) {
         valor = v;
     }
-    
-    public void establecerValor(double v){
+
+    public void establecerValor(double v) {
         valor = v;
     }
-    
-    public double obtenerValor(){
+
+    public double obtenerValor() {
         return valor;
     }
-    
-    
+
 }
